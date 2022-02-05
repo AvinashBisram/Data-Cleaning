@@ -13,7 +13,7 @@ Pandas 2021 Nutrition Data Cleaning
 
 Viewing the Project:
 --------------------
-The main file for this project is located in the root of this repository named _[Python Nutrition Data Cleaning.ipynb](Python%20Nutrition%20Data%20Cleaning.ipynb)_. If you have **Jupyter Notebooks** installed, you can download the .ipynb file and view it there. If not, you can view the project using Google Colaboratory [here]().  
+The main file for this project is located in the root of this repository named _[Python Nutrition Data Cleaning.ipynb](Python%20Nutrition%20Data%20Cleaning.ipynb)_. If you have **Jupyter Notebooks** installed, you can download the .ipynb file and view it there. If not, you can view the project using Google Colaboratory [here](https://colab.research.google.com/github/AvinashBisram/Data-Cleaning/blob/master/Pandas%202021%20Nutrition%20Data%20Cleaning/Python%20Nutrition%20Data%20Cleaning.ipynb).  
 **Note:** Executing all cells in the main project file will create 2 CSV files on your computer.
 
 About the Data:

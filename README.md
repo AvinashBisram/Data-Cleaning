@@ -4,7 +4,7 @@ Data Cleaning Projects
 This repository will contain projects related to data cleaning using Python and SQL.
 
 **Language(s):** Python, SQL  
-**Package(s):** (Python) Pandas  
+**Package(s):** (Python) Pandas, Seaborn  
 **Software:** Jupyter Notebooks  
 
 Projects Coming Soon:

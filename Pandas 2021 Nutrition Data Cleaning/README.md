@@ -18,7 +18,7 @@ The main file for this project is located in the root of this repository named _
 About the Data
 ---------------
 The dataset used in this project was personal 2021 Nutrition Data tracked over the course of an entire year.  
-The data was recorded in Google Docs and downloaded as a [Microsoft Excel file](2021%20Nutrition%20Data%20(RAW).xlsx). It was then imported into the project file as a **Pandas** Data Frame.
+The data was recorded in Google Docs and downloaded as a [Microsoft Excel file](./2021%20Nutrition%20Data%20(RAW).xlsx). It was then imported into the project file as a **Pandas** Data Frame.
 <br>
 A snippet of the data can be seen below:  
 ![Head of Raw Dataset](./readMe%20images/2021_Nutrition_Raw_Data_Snapshot.png)
@@ -88,7 +88,7 @@ The missing value percentage per feature at this stage can be seen below:
 
 Saving the Data
 ----------------
-Finally, both the main data set and weekly aggregate data frame were saved as CSV files. The main dataset can be seen [here](2021_Nutrition_Data_CLEAN_Pandas.csv) and the weekly aggregate data can be seen [here](2021_Nutrition_Data_WeeklyAgg.csv).
+Finally, both the main data set and weekly aggregate data frame were saved as CSV files. The main dataset can be seen [here](./2021_Nutrition_Data_CLEAN_Pandas.csv) and the weekly aggregate data can be seen [here](./2021_Nutrition_Data_WeeklyAgg.csv).
 
 
 Next Steps

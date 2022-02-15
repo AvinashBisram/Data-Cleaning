@@ -48,7 +48,7 @@ Now that the general format of the Data Frame was improved, we moved on to clean
     * No duplicate records were found but the appropriate method for handling duplicates was discussed anyways.
 * Missing Data was identified.
     * 8 columns contained missing values at this stage.
-    * Barplots were created to visualize the missing values per feature as total counts and percentages of the dataset length. The visualization expressing the values as percentages can be seen below:  ![Percentage of Missing Data per Feature](./readMe%20images/missing_data_percent_viz.png)  
+    * Barplots were created to visualize the missing values per feature as total counts and percentages of the dataset length. The visualization expressing the values as percentages can be seen below:  ![Percentage of Missing Data per Feature](./readMe%20images/missing_data_percent_viz.PNG)  
     * Intuition behind the decision to drop or keep columns with missing data was discussed. No columns were dropped but it was decided to recast them to their appropriate data types so methods for filling missing data could be used.
 * Data types for 11 columns were recasted (only the Activity column remained as 'object').
 * Missing data was successfully handled for 2 columns.
@@ -57,16 +57,14 @@ Now that the general format of the Data Frame was improved, we moved on to clean
     * The various methods for filling 'Daily Weight' were discussed (propagation, interpolation, etc.). It was decided to calculate average weekly bodyweight through feature engineering first and then fill the missing values in this column.
     * The remaining columns ('Actual' columns for macronutrient information) contained missing values in the same records. Filling these values were also postponed until after feature engineering.
     * Intuition was given for every choice made in this process such as juxtaposing the various methods and their effects on the data integrity and final visualization, and the best way to approximate values while preserving long-term trends.
-
-The percentages of missing values remaining after this process was visualized as below:  
-![Perentage of Missing Data per Column after Cleaning](./readMe%20images/missing_data_percent_viz_2.png)
+    * The percentages of missing values remaining after this process was visualized as below:<br>![Perentage of Missing Data per Column after Cleaning](./readMe%20images/missing_data_percent_viz_2.PNG)
 
 
 Feature Engineering
 --------------------
 This section was the most challenging as specific goals for each column was outlined in the beginning of the project. For some columns, a much deeper understanding of Pandas documentation was required as well as theory for filling missing values in datasets.  
 The names and general descriptions of those columns can be seen below:  
-![Feature Engineer Column Descriptions](./readMe%20images/FE_column_descriptions.png)  
+![Feature Engineer Column Descriptions](./readMe%20images/FE_column_descriptions.PNG)  
 <br>
 * "Weekly Average Weight" was created by recording the values of 'Date' as their respective weekdays (with ```dt.day_name()```). Then ```pd.Grouper()``` was used with a Weekly frequency to partition records starting on each Monday. Lastly, an aggregate ```.mean()``` method was applied to each group of weights. The final aggregate Data Frame was merged to the main dataset (left merge) where records shared the same 'Date' value (weekly averages were displayed on the Sunday of each week with all other values being NaN).
 * "Net Weight Change" was created in a similar manner with the addition of ```.rolling()``` and a lambda defined aggregate function calculating the difference between weeks. The Data Frame constructed here was also merged with the main dataset. 
@@ -78,7 +76,7 @@ Final Cleaning
 ---------------
 With the feature engineering process finished, it was now time to go back and attempt to fill the remaining missing values that were postponed in the original data cleaning process.  
 The missing value percentage per feature at this stage can be seen below:  
-![Missing Data Percent after Feature Engineering](./readMe%20images/missing_data_percent_viz_3.png)  
+![Missing Data Percent after Feature Engineering](./readMe%20images/missing_data_percent_viz_3.PNG)  
 <br>
 * Due to the large amount of missing data in the two weekly aggregate columns (Average Weekly Weight and Net Weight Change), it was decided to store these values as a separate Data Frame that could always be merged back if necessary (or simply visualized as is). Due to that decision, we were again unable to fill the missing values in Daily Weight. However, since the Average Weekly Weights were already calculated and stored as a deep copy of the main dataset (changing values in one would not carry over to the other) we now had the freedom to use a different method to fill the values. 
 * A new column for Trend Weight was created which calculated the rolling average of bodyweights over 7 days (fortunately no cluster of missing records were larger than 6 so this method ensures every value is filled in some manner). This column was then used to populate missing values in the Daily Bodyweight column as there was no risk of altering the previously calculated Average Weekly Weights and the long-term weight trend was still preserved.

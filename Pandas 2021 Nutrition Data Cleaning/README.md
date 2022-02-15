@@ -21,7 +21,8 @@ The dataset used in this project was personal 2021 Nutrition Data tracked over t
 The data was recorded in Google Docs and downloaded as a [Microsoft Excel file](./2021%20Nutrition%20Data%20(RAW).xlsx). It was then imported into the project file as a **Pandas** Data Frame.
 <br>
 A snippet of the data can be seen below:  
-![Head of Raw Dataset](./readMe%20images/2021_Nutrition_Raw_Data_Snapshot.png)
+
+![Head of Raw Dataset](./readMe%20images/2021_Nutrition_Raw_Data_Snapshot.PNG)
 Features were tracked daily such as daily bodyweight (lbs), calorie and macronutrient goals as well as actual amounts consumed for each, and additional cardio performed with one column specifying the activity and another specifying the duration.
 
 

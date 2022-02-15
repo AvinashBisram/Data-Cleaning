@@ -66,7 +66,6 @@ Feature Engineering
 This section was the most challenging as specific goals for each column was outlined in the beginning of the project. For some columns, a much deeper understanding of Pandas documentation was required as well as theory for filling missing values in datasets.  
 The names and general descriptions of those columns can be seen below:  
 ![Feature Engineer Column Descriptions](./readMe%20images/FE_column_descriptions.PNG)  
-<br>
 * "Weekly Average Weight" was created by recording the values of 'Date' as their respective weekdays (with ```dt.day_name()```). Then ```pd.Grouper()``` was used with a Weekly frequency to partition records starting on each Monday. Lastly, an aggregate ```.mean()``` method was applied to each group of weights. The final aggregate Data Frame was merged to the main dataset (left merge) where records shared the same 'Date' value (weekly averages were displayed on the Sunday of each week with all other values being NaN).
 * "Net Weight Change" was created in a similar manner with the addition of ```.rolling()``` and a lambda defined aggregate function calculating the difference between weeks. The Data Frame constructed here was also merged with the main dataset. 
 * The remaining Adherence and Difference columns were created by applying simple arithmetic to the appropriate features and assigning those values to a new feature for each.

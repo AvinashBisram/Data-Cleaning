@@ -13,4 +13,4 @@ Current Projects:
 
 Projects Coming Soon:
 ---------------------
-* [SQL 2021 Nutrition Data Cleaning](): Will use MySQL queries to accomplish the same data cleaning and feature engineering process followed in [Pandas 2021 Nutrition Data Cleaning](./Pandas%202021%20Nutrition%20Data%20Cleaning), producing the same final CSV files of transformed data.
+* **SQL 2021 Nutrition Data Cleaning**: Will use MySQL queries to accomplish the same data cleaning and feature engineering process followed in [Pandas 2021 Nutrition Data Cleaning](./Pandas%202021%20Nutrition%20Data%20Cleaning), producing the same final CSV files of transformed data.

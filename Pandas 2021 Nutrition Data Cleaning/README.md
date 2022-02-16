@@ -1,7 +1,7 @@
 Pandas 2021 Nutrition Data Cleaning
 ===================================
 
-**Description:** This project prepares sample 2021 Nutrition data for future visualization through extensive data cleaning and feature engineering. Missing and duplicate data are handled, feature data types are recasted, and 11 new features are created using existing data (through advanced grouping and window functions).
+**Description:** This project prepares sample 2021 Nutrition data for future visualization through extensive data cleaning and feature engineering. Missing and duplicate data are handled, feature data types are recasted, and 11 new features are created using existing data (through grouping, window functions, and merges).
 
 **Language(s):** Python  
 **Package(s):** Pandas, Seaborn  
